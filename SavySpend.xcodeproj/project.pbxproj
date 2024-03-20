@@ -14,6 +14,22 @@
 		1215ED852BAA34E2009B5B01 /* SavySpendTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1215ED842BAA34E2009B5B01 /* SavySpendTests.swift */; };
 		1215ED8F2BAA34E2009B5B01 /* SavySpendUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1215ED8E2BAA34E2009B5B01 /* SavySpendUITests.swift */; };
 		1215ED912BAA34E2009B5B01 /* SavySpendUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1215ED902BAA34E2009B5B01 /* SavySpendUITestsLaunchTests.swift */; };
+		1215EDA12BAA3F89009B5B01 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1215EDA02BAA3F89009B5B01 /* SettingsView.swift */; };
+		1215EDA32BAA5AD1009B5B01 /* NotificationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1215EDA22BAA5AD1009B5B01 /* NotificationState.swift */; };
+		1215EDA52BAA72BB009B5B01 /* ThemeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1215EDA42BAA72BB009B5B01 /* ThemeView.swift */; };
+		1215EDA72BAA740A009B5B01 /* AboutUsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1215EDA62BAA740A009B5B01 /* AboutUsView.swift */; };
+		1215EDA92BAA784F009B5B01 /* SettingsHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1215EDA82BAA784F009B5B01 /* SettingsHeaderView.swift */; };
+		1215EDAB2BAA7ADE009B5B01 /* Transactions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1215EDAA2BAA7ADE009B5B01 /* Transactions.swift */; };
+		1215EDAD2BAA7AFD009B5B01 /* Budget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1215EDAC2BAA7AFD009B5B01 /* Budget.swift */; };
+		1215EDAF2BAA7B1F009B5B01 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1215EDAE2BAA7B1F009B5B01 /* Category.swift */; };
+		1215EDB12BAA7B46009B5B01 /* ChartModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1215EDB02BAA7B46009B5B01 /* ChartModel.swift */; };
+		1215EDB32BAA7C0E009B5B01 /* TintColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1215EDB22BAA7C0E009B5B01 /* TintColor.swift */; };
+		1215EDB52BAA7C71009B5B01 /* UIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1215EDB42BAA7C71009B5B01 /* UIConstants.swift */; };
+		1215EDB72BAA7CB8009B5B01 /* CustomShareSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1215EDB62BAA7CB8009B5B01 /* CustomShareSheet.swift */; };
+		1215EDB92BAA7CD3009B5B01 /* SwipeAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1215EDB82BAA7CD3009B5B01 /* SwipeAction.swift */; };
+		1215EDBB2BAA7D03009B5B01 /* HapticsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1215EDBA2BAA7D03009B5B01 /* HapticsManager.swift */; };
+		1215EDBD2BAA7D33009B5B01 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1215EDBC2BAA7D33009B5B01 /* DateExtension.swift */; };
+		1215EDBF2BAA7D51009B5B01 /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1215EDBE2BAA7D51009B5B01 /* ViewExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +61,22 @@
 		1215ED8A2BAA34E2009B5B01 /* SavySpendUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SavySpendUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1215ED8E2BAA34E2009B5B01 /* SavySpendUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavySpendUITests.swift; sourceTree = "<group>"; };
 		1215ED902BAA34E2009B5B01 /* SavySpendUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavySpendUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		1215EDA02BAA3F89009B5B01 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		1215EDA22BAA5AD1009B5B01 /* NotificationState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationState.swift; sourceTree = "<group>"; };
+		1215EDA42BAA72BB009B5B01 /* ThemeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeView.swift; sourceTree = "<group>"; };
+		1215EDA62BAA740A009B5B01 /* AboutUsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUsView.swift; sourceTree = "<group>"; };
+		1215EDA82BAA784F009B5B01 /* SettingsHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsHeaderView.swift; sourceTree = "<group>"; };
+		1215EDAA2BAA7ADE009B5B01 /* Transactions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transactions.swift; sourceTree = "<group>"; };
+		1215EDAC2BAA7AFD009B5B01 /* Budget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Budget.swift; sourceTree = "<group>"; };
+		1215EDAE2BAA7B1F009B5B01 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		1215EDB02BAA7B46009B5B01 /* ChartModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartModel.swift; sourceTree = "<group>"; };
+		1215EDB22BAA7C0E009B5B01 /* TintColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TintColor.swift; sourceTree = "<group>"; };
+		1215EDB42BAA7C71009B5B01 /* UIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIConstants.swift; sourceTree = "<group>"; };
+		1215EDB62BAA7CB8009B5B01 /* CustomShareSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomShareSheet.swift; sourceTree = "<group>"; };
+		1215EDB82BAA7CD3009B5B01 /* SwipeAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeAction.swift; sourceTree = "<group>"; };
+		1215EDBA2BAA7D03009B5B01 /* HapticsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticsManager.swift; sourceTree = "<group>"; };
+		1215EDBC2BAA7D33009B5B01 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
+		1215EDBE2BAA7D51009B5B01 /* ViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,8 +127,10 @@
 		1215ED712BAA34E0009B5B01 /* SavySpend */ = {
 			isa = PBXGroup;
 			children = (
+				1215ED9F2BAA3F56009B5B01 /* Helpers */,
+				1215ED9E2BAA3F4E009B5B01 /* Models */,
 				1215ED722BAA34E0009B5B01 /* SavySpendApp.swift */,
-				1215ED742BAA34E0009B5B01 /* ContentView.swift */,
+				1215ED9D2BAA3F45009B5B01 /* Views */,
 				1215ED762BAA34E2009B5B01 /* Assets.xcassets */,
 				1215ED782BAA34E2009B5B01 /* SavySpend.entitlements */,
 				1215ED792BAA34E2009B5B01 /* Preview Content */,
@@ -127,6 +161,44 @@
 				1215ED902BAA34E2009B5B01 /* SavySpendUITestsLaunchTests.swift */,
 			);
 			path = SavySpendUITests;
+			sourceTree = "<group>";
+		};
+		1215ED9D2BAA3F45009B5B01 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1215ED742BAA34E0009B5B01 /* ContentView.swift */,
+				1215EDA02BAA3F89009B5B01 /* SettingsView.swift */,
+				1215EDA42BAA72BB009B5B01 /* ThemeView.swift */,
+				1215EDA62BAA740A009B5B01 /* AboutUsView.swift */,
+				1215EDA82BAA784F009B5B01 /* SettingsHeaderView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1215ED9E2BAA3F4E009B5B01 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1215EDA22BAA5AD1009B5B01 /* NotificationState.swift */,
+				1215EDAA2BAA7ADE009B5B01 /* Transactions.swift */,
+				1215EDAC2BAA7AFD009B5B01 /* Budget.swift */,
+				1215EDAE2BAA7B1F009B5B01 /* Category.swift */,
+				1215EDB02BAA7B46009B5B01 /* ChartModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		1215ED9F2BAA3F56009B5B01 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				1215EDB22BAA7C0E009B5B01 /* TintColor.swift */,
+				1215EDB42BAA7C71009B5B01 /* UIConstants.swift */,
+				1215EDB62BAA7CB8009B5B01 /* CustomShareSheet.swift */,
+				1215EDB82BAA7CD3009B5B01 /* SwipeAction.swift */,
+				1215EDBA2BAA7D03009B5B01 /* HapticsManager.swift */,
+				1215EDBC2BAA7D33009B5B01 /* DateExtension.swift */,
+				1215EDBE2BAA7D51009B5B01 /* ViewExtension.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,8 +331,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1215EDBF2BAA7D51009B5B01 /* ViewExtension.swift in Sources */,
+				1215EDA12BAA3F89009B5B01 /* SettingsView.swift in Sources */,
+				1215EDBD2BAA7D33009B5B01 /* DateExtension.swift in Sources */,
+				1215EDAF2BAA7B1F009B5B01 /* Category.swift in Sources */,
+				1215EDB72BAA7CB8009B5B01 /* CustomShareSheet.swift in Sources */,
 				1215ED752BAA34E0009B5B01 /* ContentView.swift in Sources */,
+				1215EDA92BAA784F009B5B01 /* SettingsHeaderView.swift in Sources */,
+				1215EDB32BAA7C0E009B5B01 /* TintColor.swift in Sources */,
+				1215EDBB2BAA7D03009B5B01 /* HapticsManager.swift in Sources */,
+				1215EDB52BAA7C71009B5B01 /* UIConstants.swift in Sources */,
+				1215EDA32BAA5AD1009B5B01 /* NotificationState.swift in Sources */,
+				1215EDA52BAA72BB009B5B01 /* ThemeView.swift in Sources */,
+				1215EDAD2BAA7AFD009B5B01 /* Budget.swift in Sources */,
+				1215EDA72BAA740A009B5B01 /* AboutUsView.swift in Sources */,
+				1215EDB12BAA7B46009B5B01 /* ChartModel.swift in Sources */,
+				1215EDAB2BAA7ADE009B5B01 /* Transactions.swift in Sources */,
 				1215ED732BAA34E0009B5B01 /* SavySpendApp.swift in Sources */,
+				1215EDB92BAA7CD3009B5B01 /* SwipeAction.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
