@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		12138B032BB0A03C00DF4BC4 /* Tab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12138B022BB0A03C00DF4BC4 /* Tab.swift */; };
+		12138B052BB0A16000DF4BC4 /* TabBarHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12138B042BB0A16000DF4BC4 /* TabBarHome.swift */; };
+		12138B072BB0A1D400DF4BC4 /* TabPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12138B062BB0A1D400DF4BC4 /* TabPosition.swift */; };
+		12138B092BB0A23900DF4BC4 /* TabShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12138B082BB0A23900DF4BC4 /* TabShape.swift */; };
 		1215ED732BAA34E0009B5B01 /* SavySpendApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1215ED722BAA34E0009B5B01 /* SavySpendApp.swift */; };
 		1215ED752BAA34E0009B5B01 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1215ED742BAA34E0009B5B01 /* ContentView.swift */; };
 		1215ED772BAA34E2009B5B01 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1215ED762BAA34E2009B5B01 /* Assets.xcassets */; };
@@ -30,7 +34,6 @@
 		1215EDBD2BAA7D33009B5B01 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1215EDBC2BAA7D33009B5B01 /* DateExtension.swift */; };
 		1215EDBF2BAA7D51009B5B01 /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1215EDBE2BAA7D51009B5B01 /* ViewExtension.swift */; };
 		1215EDC12BAA7EEF009B5B01 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1215EDC02BAA7EEF009B5B01 /* LoadingView.swift */; };
-		1215EDC32BAA8438009B5B01 /* TransactionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1215EDC22BAA8438009B5B01 /* TransactionsView.swift */; };
 		1215EDC52BAA84BC009B5B01 /* GraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1215EDC42BAA84BC009B5B01 /* GraphView.swift */; };
 		1215EDC82BAA8564009B5B01 /* HelpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1215EDC72BAA8564009B5B01 /* HelpView.swift */; };
 		1215EDCA2BAA85DA009B5B01 /* FilterTransactionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1215EDC92BAA85DA009B5B01 /* FilterTransactionView.swift */; };
@@ -47,6 +50,7 @@
 		12348D582BAE0D4B003903E6 /* CollectionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12348D572BAE0D4B003903E6 /* CollectionsView.swift */; };
 		12348D5A2BAE0D75003903E6 /* ThreeDots.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12348D592BAE0D75003903E6 /* ThreeDots.swift */; };
 		12348D5F2BAE107C003903E6 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12348D5E2BAE107C003903E6 /* FeedCell.swift */; };
+		12348D6B2BAF61C1003903E6 /* TransactionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12348D6A2BAF61C1003903E6 /* TransactionsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +71,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		12138B022BB0A03C00DF4BC4 /* Tab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab.swift; sourceTree = "<group>"; };
+		12138B042BB0A16000DF4BC4 /* TabBarHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarHome.swift; sourceTree = "<group>"; };
+		12138B062BB0A1D400DF4BC4 /* TabPosition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabPosition.swift; sourceTree = "<group>"; };
+		12138B082BB0A23900DF4BC4 /* TabShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabShape.swift; sourceTree = "<group>"; };
 		1215ED6F2BAA34E0009B5B01 /* SavySpend.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SavySpend.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1215ED722BAA34E0009B5B01 /* SavySpendApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavySpendApp.swift; sourceTree = "<group>"; };
 		1215ED742BAA34E0009B5B01 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -94,7 +102,6 @@
 		1215EDBC2BAA7D33009B5B01 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 		1215EDBE2BAA7D51009B5B01 /* ViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
 		1215EDC02BAA7EEF009B5B01 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
-		1215EDC22BAA8438009B5B01 /* TransactionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsView.swift; sourceTree = "<group>"; };
 		1215EDC42BAA84BC009B5B01 /* GraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphView.swift; sourceTree = "<group>"; };
 		1215EDC72BAA8564009B5B01 /* HelpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpView.swift; sourceTree = "<group>"; };
 		1215EDC92BAA85DA009B5B01 /* FilterTransactionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterTransactionView.swift; sourceTree = "<group>"; };
@@ -111,6 +118,7 @@
 		12348D572BAE0D4B003903E6 /* CollectionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionsView.swift; sourceTree = "<group>"; };
 		12348D592BAE0D75003903E6 /* ThreeDots.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeDots.swift; sourceTree = "<group>"; };
 		12348D5E2BAE107C003903E6 /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
+		12348D6A2BAF61C1003903E6 /* TransactionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +146,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		12138B0A2BB0A8EF00DF4BC4 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				12138B082BB0A23900DF4BC4 /* TabShape.swift */,
+				12138B062BB0A1D400DF4BC4 /* TabPosition.swift */,
+				12138B022BB0A03C00DF4BC4 /* Tab.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
 		1215ED662BAA34E0009B5B01 = {
 			isa = PBXGroup;
 			children = (
@@ -164,6 +182,7 @@
 				1215ED722BAA34E0009B5B01 /* SavySpendApp.swift */,
 				1215ED9F2BAA3F56009B5B01 /* Helpers */,
 				1215ED9E2BAA3F4E009B5B01 /* Models */,
+				12138B0A2BB0A8EF00DF4BC4 /* TabBar */,
 				1215ED9D2BAA3F45009B5B01 /* Views */,
 				1215ED762BAA34E2009B5B01 /* Assets.xcassets */,
 				1215ED782BAA34E2009B5B01 /* SavySpend.entitlements */,
@@ -200,6 +219,7 @@
 		1215ED9D2BAA3F45009B5B01 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				12138B042BB0A16000DF4BC4 /* TabBarHome.swift */,
 				12348D5B2BAE0F79003903E6 /* Profile */,
 				1215EDDE2BAB3B35009B5B01 /* HelperViews */,
 				1215EDDF2BAB3B6C009B5B01 /* Budget */,
@@ -252,12 +272,12 @@
 		1215EDDD2BAB3AFE009B5B01 /* Transaction */ = {
 			isa = PBXGroup;
 			children = (
-				1215EDC22BAA8438009B5B01 /* TransactionsView.swift */,
 				1215EDD12BAA86B7009B5B01 /* AddTransaction.swift */,
 				1215EDD72BAB265A009B5B01 /* EditTransaction.swift */,
 				1215EDCB2BAA863F009B5B01 /* TransactionCardView.swift */,
 				1215EDC92BAA85DA009B5B01 /* FilterTransactionView.swift */,
 				12348D5E2BAE107C003903E6 /* FeedCell.swift */,
+				12348D6A2BAF61C1003903E6 /* TransactionsView.swift */,
 			);
 			path = Transaction;
 			sourceTree = "<group>";
@@ -429,12 +449,15 @@
 				1215EE242BACC43A009B5B01 /* User.swift in Sources */,
 				1215EDBD2BAA7D33009B5B01 /* DateExtension.swift in Sources */,
 				12348D5A2BAE0D75003903E6 /* ThreeDots.swift in Sources */,
+				12348D6B2BAF61C1003903E6 /* TransactionsView.swift in Sources */,
 				1215EDAF2BAA7B1F009B5B01 /* Category.swift in Sources */,
+				12138B092BB0A23900DF4BC4 /* TabShape.swift in Sources */,
 				1215EDB72BAA7CB8009B5B01 /* CustomShareSheet.swift in Sources */,
 				12348D582BAE0D4B003903E6 /* CollectionsView.swift in Sources */,
 				1215EDC82BAA8564009B5B01 /* HelpView.swift in Sources */,
+				12138B052BB0A16000DF4BC4 /* TabBarHome.swift in Sources */,
 				1215EDDC2BAB3462009B5B01 /* AddBudget.swift in Sources */,
-				1215EDC32BAA8438009B5B01 /* TransactionsView.swift in Sources */,
+				12138B032BB0A03C00DF4BC4 /* Tab.swift in Sources */,
 				1215ED752BAA34E0009B5B01 /* ContentView.swift in Sources */,
 				1215EDB32BAA7C0E009B5B01 /* TintColor.swift in Sources */,
 				1215EDBB2BAA7D03009B5B01 /* HapticsManager.swift in Sources */,
@@ -451,6 +474,7 @@
 				1215EDCA2BAA85DA009B5B01 /* FilterTransactionView.swift in Sources */,
 				1215EDA72BAA740A009B5B01 /* AboutUsView.swift in Sources */,
 				1215EDD22BAA86B7009B5B01 /* AddTransaction.swift in Sources */,
+				12138B072BB0A1D400DF4BC4 /* TabPosition.swift in Sources */,
 				1215EDB12BAA7B46009B5B01 /* ChartModel.swift in Sources */,
 				1215EDAB2BAA7ADE009B5B01 /* Transactions.swift in Sources */,
 				1215ED732BAA34E0009B5B01 /* SavySpendApp.swift in Sources */,

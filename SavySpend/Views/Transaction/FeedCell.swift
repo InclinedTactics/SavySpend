@@ -46,7 +46,7 @@ struct FeedCell: View {
                                                 .resizable()
                                                 .scaledToFit()
                                                 .clipShape(Circle())
-                                                .padding(3)
+                                                .padding(4)
                                         }
                                         .shadow(color: .gray, radius: 2, x:2, y: 2)
                                         .padding(.leading)

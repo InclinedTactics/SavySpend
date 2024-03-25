@@ -222,10 +222,10 @@ struct ListOfExpenses: View {
                         }
                         .padding(15)
                     }
-                    .background(.black.opacity(0.2))
+                    .background(.background)
                     .navigationTitle(format(date: month, format: "MMM yyyy"))
                     .navigationDestination(item: $selectedTransaction) { transaction in
-                        TransactionsView()
+                       TransactionsView()
                     }
                 }
             }

@@ -1,8 +1,8 @@
 //
-//  TransactionsView.swift
+//  ImprovedTransactionsView.swift
 //  SavySpend
 //
-//  Created by J. DeWeese on 3/19/24.
+//  Created by J. DeWeese on 3/23/24.
 //
 
 import SwiftUI
@@ -10,7 +10,6 @@ import SwiftData
 
 struct TransactionsView: View {
     //MARK:  PROPERTIES
-    @Environment(\.modelContext) private var context
     /// User Properties
     @AppStorage("userName") private var userName: String = ""
     @AppStorage("userName") private var userEmail: String = ""
@@ -21,11 +20,14 @@ struct TransactionsView: View {
     @State private var endDate: Date = .now.endOfMonth
     @State private var addTransaction: Bool = false
     @State private var showMetrics: Bool = false
-    @State private var showSettings = false
+    @State private var showProfile = false
     @State private var selectedCategory: Category = .expense
     @State private var selectedTransaction: Transaction?
     @State private var selectedTab = 0
     @State private var showMenu = false
+  
+   
+  
     /// For Animation
     @Namespace private var animation
     var body: some View {
@@ -37,6 +39,7 @@ struct TransactionsView: View {
                     LazyVStack(spacing: 0.5, pinnedViews: [.sectionHeaders]){
                         //MARK: SECTION
                         Section{
+                           
                             VStack{
                                 FilterTransactionsView(startDate: startDate, endDate: endDate, category: selectedCategory) { transactions in
                                     /// Card View
@@ -58,17 +61,9 @@ struct TransactionsView: View {
                                 .padding(.bottom, 5)
                                 
                                 ///MARK:  FILTER TRANSACTION VIEW
-                               
                                 FilterTransactionsView(startDate: startDate, endDate: endDate, category: selectedCategory) { transactions in
-                                    if transactions.isEmpty{
-                                        ContentUnavailableView("Press ( + ) to begin tracking your finances.", systemImage: "exclamationmark.icloud.fill")
-                                            .fontDesign(.serif)
-                                            .fontWeight(.regular)
-                                            .font(.title)
-                                            .foregroundStyle(.primary)
-                                    }
                                     ForEach(transactions){ transaction in
-                                        FeedCell(transaction: transaction)
+                                        TransactionCardView(transaction: transaction)
                                             .onTapGesture {
                                                 selectedTransaction = transaction
                                             }
@@ -76,7 +71,7 @@ struct TransactionsView: View {
                                     .padding(.top, 10)
                                 }
                                 .animation(.none, value: selectedCategory)
-                            }.blur(radius: showSettings ? 8 : 0)
+                            }.blur(radius: showProfile ? 8 : 0)
                             //MARK: HEADER
                         } header: {
                             HeaderView(size)
@@ -115,25 +110,26 @@ struct TransactionsView: View {
     func HeaderView(_ size: CGSize) -> some View {
         NavigationStack{
             HStack(spacing: 10) {
-                Button {
-                    showSettings = true
-                    HapticManager.notification(type: .success)
+                NavigationLink{
+                    ProfileView(name: name, userName: userName, userEmail: userEmail)
+                  
                 } label: {
                     Image(systemName: "person.circle")
                         .resizable()
                         .font(.largeTitle)
-                        .fontWeight(.light)
+                        .fontWeight(.semibold)
                         .frame(width: 38, height: 38)
                         .foregroundStyle(.white)
                         .padding(.leading, 2)
                         .clipShape(Circle())
                         .padding(3)
                         .background(appTint.gradient, in: .circle)
+                        .shadow(color: .black, radius: 1, x: 1, y: 1)
                 }
-                .sheet(isPresented: $showSettings) {
+                .sheet(isPresented: $showProfile) {
                     SettingsView()
+                        .presentationDetents([.medium])
                 }
-                .presentationDetents([.large])
                 Spacer()
                 VStack(alignment: .leading, spacing: 2) {
                     Text("Welcome!")
@@ -152,6 +148,7 @@ struct TransactionsView: View {
                             .foregroundStyle(.secondary)
                     }
                 }
+                
                 Spacer(minLength: 0)
                 NavigationLink {
                     AddTransaction()
@@ -162,15 +159,18 @@ struct TransactionsView: View {
                         .foregroundStyle(.white)
                         .frame(width: 38, height: 38)
                         .background(appTint.gradient, in: .circle)
-                        .contentShape(.circle)
+                        .shadow(color: .black, radius: 1, x: 1, y: 1)
                 }
-            }.blur(radius: showSettings ? 8 : 0)
+                
+            }
+            .blur(radius: showProfile ? 8 : 0)
             .padding(.horizontal,7)
             .padding(.bottom, userName.isEmpty ? 10 : 5)
+        
             .background {
                 VStack(spacing: 0) {
                     Rectangle()
-                        .fill(.gray.opacity(0.015))
+                        .fill(.black.opacity(0.01))
                 }
                 .visualEffect { content, geometryProxy in
                     content
@@ -194,7 +194,7 @@ struct TransactionsView: View {
                                 .fontWeight(.bold)
                                 .foregroundStyle(appTint)
                                 .frame(width: 200)
-                              
+                             
                     }
                     .padding(10)
                     .padding(.horizontal)
@@ -203,13 +203,12 @@ struct TransactionsView: View {
                             RoundedRectangle(cornerRadius: 10, style: .continuous)
                                 .fill(.colorTitanium.gradient)
                                 .hSpacing(.center)
-                                .shadow(color: .black, radius: 3)
                         }
                 }.hSpacing(.center)
                    
             Spacer()
             ///MARK:  BUTTON MENU
-            ButtonMenu()
+         
                     .frame(width: 372)
         }
     }
@@ -228,8 +227,4 @@ struct TransactionsView: View {
             return 1 + scale
         }
     }
-
-#Preview {
-   ContentView()
-}
 
