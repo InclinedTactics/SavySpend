@@ -12,6 +12,8 @@
 		12138B072BB0A1D400DF4BC4 /* TabPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12138B062BB0A1D400DF4BC4 /* TabPosition.swift */; };
 		12138B092BB0A23900DF4BC4 /* TabShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12138B082BB0A23900DF4BC4 /* TabShape.swift */; };
 		12138B0E2BB1B7BF00DF4BC4 /* EditProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12138B0D2BB1B7BF00DF4BC4 /* EditProfileView.swift */; };
+		12138B142BB1F81900DF4BC4 /* TimeZoneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12138B132BB1F81900DF4BC4 /* TimeZoneView.swift */; };
+		12138B162BB1F84200DF4BC4 /* TimeZoneRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12138B152BB1F84200DF4BC4 /* TimeZoneRow.swift */; };
 		1215ED732BAA34E0009B5B01 /* SavySpendApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1215ED722BAA34E0009B5B01 /* SavySpendApp.swift */; };
 		1215ED752BAA34E0009B5B01 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1215ED742BAA34E0009B5B01 /* ContentView.swift */; };
 		1215ED772BAA34E2009B5B01 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1215ED762BAA34E2009B5B01 /* Assets.xcassets */; };
@@ -77,6 +79,8 @@
 		12138B062BB0A1D400DF4BC4 /* TabPosition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabPosition.swift; sourceTree = "<group>"; };
 		12138B082BB0A23900DF4BC4 /* TabShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabShape.swift; sourceTree = "<group>"; };
 		12138B0D2BB1B7BF00DF4BC4 /* EditProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileView.swift; sourceTree = "<group>"; };
+		12138B132BB1F81900DF4BC4 /* TimeZoneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeZoneView.swift; sourceTree = "<group>"; };
+		12138B152BB1F84200DF4BC4 /* TimeZoneRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeZoneRow.swift; sourceTree = "<group>"; };
 		1215ED6F2BAA34E0009B5B01 /* SavySpend.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SavySpend.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1215ED722BAA34E0009B5B01 /* SavySpendApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavySpendApp.swift; sourceTree = "<group>"; };
 		1215ED742BAA34E0009B5B01 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -229,6 +233,8 @@
 				1215EDC62BAA852B009B5B01 /* Settings */,
 				1215ED742BAA34E0009B5B01 /* ContentView.swift */,
 				1215EDC42BAA84BC009B5B01 /* GraphView.swift */,
+				12138B132BB1F81900DF4BC4 /* TimeZoneView.swift */,
+				12138B152BB1F84200DF4BC4 /* TimeZoneRow.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -446,6 +452,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1215EDD42BAA86D7009B5B01 /* ButtonMenu.swift in Sources */,
+				12138B162BB1F84200DF4BC4 /* TimeZoneRow.swift in Sources */,
 				1215EDBF2BAA7D51009B5B01 /* ViewExtension.swift in Sources */,
 				1215EDA12BAA3F89009B5B01 /* SettingsView.swift in Sources */,
 				1215EDD02BAA866B009B5B01 /* DateFilterView.swift in Sources */,
@@ -468,6 +475,7 @@
 				12348D5F2BAE107C003903E6 /* FeedCell.swift in Sources */,
 				1215EDB52BAA7C71009B5B01 /* UIConstants.swift in Sources */,
 				1215EDA32BAA5AD1009B5B01 /* NotificationState.swift in Sources */,
+				12138B142BB1F81900DF4BC4 /* TimeZoneView.swift in Sources */,
 				1215EDD62BAB22B6009B5B01 /* CardView.swift in Sources */,
 				1215EDA52BAA72BB009B5B01 /* ThemeView.swift in Sources */,
 				1215EDAD2BAA7AFD009B5B01 /* Budget.swift in Sources */,
