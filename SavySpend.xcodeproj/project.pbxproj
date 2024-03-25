@@ -11,6 +11,7 @@
 		12138B052BB0A16000DF4BC4 /* TabBarHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12138B042BB0A16000DF4BC4 /* TabBarHome.swift */; };
 		12138B072BB0A1D400DF4BC4 /* TabPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12138B062BB0A1D400DF4BC4 /* TabPosition.swift */; };
 		12138B092BB0A23900DF4BC4 /* TabShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12138B082BB0A23900DF4BC4 /* TabShape.swift */; };
+		12138B0E2BB1B7BF00DF4BC4 /* EditProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12138B0D2BB1B7BF00DF4BC4 /* EditProfileView.swift */; };
 		1215ED732BAA34E0009B5B01 /* SavySpendApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1215ED722BAA34E0009B5B01 /* SavySpendApp.swift */; };
 		1215ED752BAA34E0009B5B01 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1215ED742BAA34E0009B5B01 /* ContentView.swift */; };
 		1215ED772BAA34E2009B5B01 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1215ED762BAA34E2009B5B01 /* Assets.xcassets */; };
@@ -75,6 +76,7 @@
 		12138B042BB0A16000DF4BC4 /* TabBarHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarHome.swift; sourceTree = "<group>"; };
 		12138B062BB0A1D400DF4BC4 /* TabPosition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabPosition.swift; sourceTree = "<group>"; };
 		12138B082BB0A23900DF4BC4 /* TabShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabShape.swift; sourceTree = "<group>"; };
+		12138B0D2BB1B7BF00DF4BC4 /* EditProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileView.swift; sourceTree = "<group>"; };
 		1215ED6F2BAA34E0009B5B01 /* SavySpend.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SavySpend.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1215ED722BAA34E0009B5B01 /* SavySpendApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavySpendApp.swift; sourceTree = "<group>"; };
 		1215ED742BAA34E0009B5B01 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -308,6 +310,7 @@
 			children = (
 				12348D572BAE0D4B003903E6 /* CollectionsView.swift */,
 				1215EDE02BAB49DB009B5B01 /* ProfileView.swift */,
+				12138B0D2BB1B7BF00DF4BC4 /* EditProfileView.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -452,6 +455,7 @@
 				12348D6B2BAF61C1003903E6 /* TransactionsView.swift in Sources */,
 				1215EDAF2BAA7B1F009B5B01 /* Category.swift in Sources */,
 				12138B092BB0A23900DF4BC4 /* TabShape.swift in Sources */,
+				12138B0E2BB1B7BF00DF4BC4 /* EditProfileView.swift in Sources */,
 				1215EDB72BAA7CB8009B5B01 /* CustomShareSheet.swift in Sources */,
 				12348D582BAE0D4B003903E6 /* CollectionsView.swift in Sources */,
 				1215EDC82BAA8564009B5B01 /* HelpView.swift in Sources */,
