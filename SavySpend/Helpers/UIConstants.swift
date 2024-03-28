@@ -9,9 +9,11 @@ import SwiftUI
 
 @Observable
 class UIConstants {
+    
+    
     static let shared = UIConstants()
     
-    var appTint: String = UserDefaults.standard.string(forKey: "appTint") ?? "colorOrange"
+    var appTint: String = UserDefaults.standard.string(forKey: "appTint") ?? "orange"
     
     var tintColor: Color {
         return tints.first { $0.color == appTint }?.value ?? .blue

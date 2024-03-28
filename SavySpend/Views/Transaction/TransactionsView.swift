@@ -1,8 +1,8 @@
 //
-//  ImprovedTransactionsView.swift
+//  TransactionsView.swift
 //  SavySpend
 //
-//  Created by J. DeWeese on 3/23/24.
+//  Created by J. DeWeese on 3/25/24.
 //
 
 import SwiftUI
@@ -24,22 +24,27 @@ struct TransactionsView: View {
     @State private var selectedCategory: Category = .expense
     @State private var selectedTransaction: Transaction?
     @State private var selectedTab = 0
-    @State private var showMenu = false
-  
-   
-  
+    
+    /// SideMenu View Properties
+    @State private var showMenu: Bool = false
+    @State private var rotateWhenExpands: Bool = true
+    @State private var disablesInteractions: Bool = false
+    @State private var disableCorners: Bool = false
+    
+    
     /// For Animation
     @Namespace private var animation
     var body: some View {
         GeometryReader {
             /// For Animation Purpose
             let size = $0.size
+            
             NavigationStack {
                 ScrollView(.vertical){
                     LazyVStack(spacing: 0.5, pinnedViews: [.sectionHeaders]){
                         //MARK: SECTION
                         Section{
-                           
+                            
                             VStack{
                                 FilterTransactionsView(startDate: startDate, endDate: endDate, category: selectedCategory) { transactions in
                                     /// Card View
@@ -103,116 +108,119 @@ struct TransactionsView: View {
                 }
             }
             .animation(.snappy, value: showFilterView)
+            .background(
+                Rectangle()
+                    .fill(.clear)
+            )
         }
     }
-    //  MARK: Header View
-    @ViewBuilder
-    func HeaderView(_ size: CGSize) -> some View {
-        NavigationStack{
-            HStack(spacing: 10) {
-                NavigationLink{
-                    ProfileView(name: name, userName: userName, userEmail: userEmail)
-                  
-                } label: {
-                    Image(systemName: "person.circle")
-                        .resizable()
-                        .font(.largeTitle)
-                        .fontWeight(.semibold)
-                        .frame(width: 38, height: 38)
-                        .foregroundStyle(.white)
-                        .padding(.leading, 2)
-                        .clipShape(Circle())
-                        .padding(3)
-                        .background(appTint.gradient, in: .circle)
-                        .shadow(color: .black, radius: 1, x: 1, y: 1)
-                }
-                .sheet(isPresented: $showProfile) {
-                    SettingsView()
-                        .presentationDetents([.medium])
-                }
-                Spacer()
-                VStack(alignment: .leading, spacing: 2) {
-                    Text("Welcome!")
-                        .fontDesign(.serif)
-                        .font(.title.bold())
-                        .padding(.leading)
-                    if !userName.isEmpty {
-                        Text(userName)
-                            .font(.callout)
-                            .fontDesign(.serif)
-                            .foregroundStyle(.gray)
-                    } else {
-                        Text("...your personal Balance Sheet.")
-                            .font(.callout.bold())
-                            .fontDesign(.serif)
-                            .foregroundStyle(.secondary)
+           
+        //  MARK: Header View
+        @ViewBuilder
+        func HeaderView(_ size: CGSize) -> some View {
+            NavigationStack{
+                HStack(spacing: 10) {
+                    NavigationLink{
+                        EditProfile()
+                    } label: {
+                        VStack{
+                            ZStack{
+                                Circle()
+                                    .fill(.white)
+                                    .frame(width: 47, height: 47)
+                                    .shadow(color: .primary, radius: 1, x: 1, y: 1)
+                                
+                                Image("boys")
+                                    .resizable()
+                                    .scaledToFit()
+                                    .clipShape(Circle())
+                                    .frame(width: 42, height: 42)
+                            }
+                        }
                     }
+                    Spacer()
+                    VStack(alignment: .leading, spacing: 2) {
+                        Text("Welcome!")
+                            .fontDesign(.serif)
+                            .font(.title.bold())
+                            .padding(.leading)
+                        if !userName.isEmpty {
+                            Text(userName)
+                                .font(.callout)
+                                .fontDesign(.serif)
+                                .foregroundStyle(.gray)
+                        } else {
+                            Text("...your personal Balance Sheet.")
+                                .font(.callout.bold())
+                                .fontDesign(.serif)
+                                .foregroundStyle(.secondary)
+                        }
+                    }
+                    
+                    Spacer(minLength: 0)
+                    NavigationLink {
+                        AddTransaction()
+                    } label: {
+                        Image(systemName: "plus")
+                            .font(.title3)
+                            .fontWeight(.semibold)
+                            .foregroundStyle(.white)
+                            .frame(width: 42, height: 42)
+                            .background(appTint, in: .circle)
+                            .shadow(color: .black, radius: 1, x: 1, y: 1)
+                    }
+                    
                 }
+                .blur(radius: showProfile ? 8 : 0)
+                .padding(.horizontal,7)
+                .padding(.bottom, userName.isEmpty ? 10 : 5)
                 
-                Spacer(minLength: 0)
-                NavigationLink {
-                    AddTransaction()
-                } label: {
-                    Image(systemName: "plus")
-                        .font(.title3)
-                        .fontWeight(.semibold)
-                        .foregroundStyle(.white)
-                        .frame(width: 38, height: 38)
-                        .background(appTint.gradient, in: .circle)
-                        .shadow(color: .black, radius: 1, x: 1, y: 1)
+                .background {
+                    VStack(spacing: 0) {
+                        Rectangle()
+                            .fill(.black.opacity(0.01))
+                    }
+                    .visualEffect { content, geometryProxy in
+                        content
+                            .opacity(headerBGOpacity(geometryProxy))
+                    }
+                    .padding(.top, -(safeArea.top + 15))
                 }
-                
-            }
-            .blur(radius: showProfile ? 8 : 0)
-            .padding(.horizontal,7)
-            .padding(.bottom, userName.isEmpty ? 10 : 5)
-        
-            .background {
-                VStack(spacing: 0) {
-                    Rectangle()
-                        .fill(.black.opacity(0.01))
-                }
-                .visualEffect { content, geometryProxy in
-                    content
-                        .opacity(headerBGOpacity(geometryProxy))
-                }
-                .padding(.top, -(safeArea.top + 15))
-            }
-            ZStack {
-                HStack{
-                    ///MARK:  DATE FILTER BUTTON
-                    Button {
-                        showFilterView = true
-                        HapticManager.notification(type: .success)
-                    }  label: {
-                       Image(systemName: "calendar")
+                ZStack {
+                    HStack{
+                        ///MARK:  DATE FILTER BUTTON
+                        Button {
+                            showFilterView = true
+                            HapticManager.notification(type: .success)
+                        }  label: {
+                            Image(systemName: "calendar")
                                 .font(.title)
                                 .foregroundStyle(appTint)
                             Text("\(format(date: startDate,format: "dd MMM yy")) - \(format(date: endDate,format: "dd MMM yy"))")
-                            .font(.system(size: 18))
+                                .font(.system(size: 18))
                                 .fontDesign(.serif)
                                 .fontWeight(.bold)
                                 .foregroundStyle(appTint)
                                 .frame(width: 200)
-                             
-                    }
-                    .padding(10)
-                    .padding(.horizontal)
-                    .frame(width: 250)
+                            
+                        }
+                        .padding(10)
+                        .padding(.horizontal)
+                        .frame(width: 250)
                         .background {
                             RoundedRectangle(cornerRadius: 10, style: .continuous)
                                 .fill(.colorTitanium.gradient)
                                 .hSpacing(.center)
                         }
-                }.hSpacing(.center)
-                   
-            Spacer()
-            ///MARK:  BUTTON MENU
-         
-                    .frame(width: 372)
+                    }.hSpacing(.center)
+                    
+                    Spacer()
+                    ///MARK:  BUTTON MENU
+                    
+                        .frame(width: 372)
+                }
+            }
         }
-    }
-}
         func headerBGOpacity(_ proxy: GeometryProxy) -> CGFloat {
             let minY = proxy.frame(in: .scrollView).minY + safeArea.top
             return minY > 0 ? 0 : (-minY / 15)
@@ -225,6 +233,6 @@ struct TransactionsView: View {
             let scale = (min(max(progress, 0), 1)) * 0.4
             
             return 1 + scale
-        }
+        
     }
-
+}

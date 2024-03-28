@@ -28,7 +28,7 @@ struct CardView: View {
                             Text(" \(currencyString(income - (savings + expense + investments)))")
                                 .font(.title.bold())
                                 .fontDesign(.serif)
-                                .foregroundStyle((expense + savings + investments) - income > income ? .red : .colorGreen)
+                                .foregroundStyle((expense + savings + investments) - income > income ? .colorRed1 : .colorGreen1)
                             Text("Balance")
                                 .font(.title3)
                                 .fontDesign(.serif)
@@ -52,7 +52,7 @@ struct CardView: View {
                                     }
                                     .frame(height: 10)
                                     Capsule()
-                                        .fill(.colorGreen)
+                                        .fill(.colorGreen1)
                                         .frame(width: 280, height: 20)
                                         .padding(.horizontal, 2)
                                         .frame(height:7)

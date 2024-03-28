@@ -50,8 +50,8 @@ struct SettingsView: View {
                 Section("User Details"){
                     NavigationLink(destination: ProfileView(name: name, userName: userName, userEmail: userEmail)) {
                         HStack{
-                            SettingRow(iconName: "person.circle", iconColor: appTint)
-                            Text("Profile")
+                            SettingRow(iconName: "camera.circle", iconColor: appTint)
+                            Text("Receipt Collection")
                                 .fontDesign(.serif)
                                 .foregroundStyle(.primary)
                         }
@@ -105,6 +105,8 @@ struct SettingsView: View {
                             if isAppLockEnabled {
                                 Toggle("Lock When App Goes Background", isOn: $lockWhenAppGoesBackground)
                             }
+                            
+                            
                         }
                     }
                     //MARK:  HELP CENTER
@@ -112,7 +114,7 @@ struct SettingsView: View {
                         NavigationLink(destination: AboutUsView()) {
                             HStack{
                                 SettingRow(iconName: "info.circle", iconColor: .orange)
-                                Text("About Us")
+                                Text("Contact Us")
                                     .fontDesign(.serif)
                                     .foregroundStyle(.primary)
                             }
@@ -133,10 +135,10 @@ struct SettingsView: View {
                             exportTransactions()
                         } label: {
                             HStack{
-                                SettingRow(iconName: "square.and.arrow.up", iconColor: .colorBlue)
+                                SettingRow(iconName: "square.and.arrow.up", iconColor: .colorBlue1)
                                 Text("Export")
                                     .fontDesign(.serif)
-                                    .foregroundStyle(.primary)
+                                    .foregroundStyle(appTint)
                             }
                         }
                         Button {
@@ -146,7 +148,7 @@ struct SettingsView: View {
                                 SettingRow(iconName: "square.and.arrow.down", iconColor: .colorODGreen)
                                 Text("Import")
                                     .fontDesign(.serif)
-                                    .foregroundStyle(.primary)
+                                    .foregroundStyle(appTint)
                             }
                         }
                         

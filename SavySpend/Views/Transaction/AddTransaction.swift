@@ -184,7 +184,7 @@ struct AddTransaction: View {
                     }.hSpacing(.leading)
                     
                         .contentShape(.rect)
-                        .foregroundStyle(.colorGrey)
+                        .foregroundStyle(.colorGray)
                         .onTapGesture {
                             self.category = category
                         }

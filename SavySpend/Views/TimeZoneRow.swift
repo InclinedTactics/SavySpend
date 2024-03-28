@@ -19,14 +19,15 @@ struct TimeZoneRow: View {
                     .resizable()
                     .scaledToFit()
                     .frame(width: 25)
-                
+                    .foregroundStyle(appTint)
                 Text(tzName)
                     .fontDesign(.serif)
                     .font(.title3)
+                    .foregroundStyle(appTint)
                 Spacer()
                     .padding(4)
             }
-            .foregroundStyle(.primary)
+            
         }
     }
 }

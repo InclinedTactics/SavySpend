@@ -15,8 +15,8 @@ struct TimeZoneView: View {
     var body: some View {
         NavigationStack {
             VStack {
-                ZStack {
-                    Color.black.opacity(0.15).ignoresSafeArea()
+                VStack {
+                    Color.clear.ignoresSafeArea()
                     VStack(alignment: .center){
                         Text("Time Zone")
                             .foregroundStyle(.white)
@@ -37,78 +37,75 @@ struct TimeZoneView: View {
                             .foregroundStyle(.primary)
                             .fontWeight(.thin)
                             .padding(.horizontal)
-                            .padding(.bottom, 55)
-                        Form{
-                            Button{
-                                self.area = "Americas"
-                            } label: {
-                                TimeZoneRow(tzIcon: "globe.americas.fill", tzName: "Americas")
-                                    .foregroundStyle(.primary)
-                                    .fontDesign(.serif)
-                                    .font(.system(size: 20))
-                                    .padding(.horizontal, 15)
-                            }
-                            
-                            
-                            Button{
-                                self.area = "Europe"
-                            } label: {
-                                TimeZoneRow(tzIcon: "globe.europe.africa.fill", tzName: "Europe")
-                                    .foregroundStyle(.primary)
-                                    .fontDesign(.serif)
-                                    .font(.system(size: 20))
-                                    .padding(.horizontal, 15)
-                            }
-                            
-                            
-                            Button{
-                                self.area = "East Asia"
-                            } label: {
-                                TimeZoneRow(tzIcon: "globe.asia.australia.fill", tzName: "East Asia")
-                                    .foregroundStyle(.primary)
-                                    .fontDesign(.serif)
-                                    .font(.system(size: 20))
-                                    .padding(.horizontal, 15)
-                            }
-                            
-                            
-                            Button{
-                                self.area = "West Asia"
-                            } label: {
-                                TimeZoneRow(tzIcon: "globe.asia.australia.fill", tzName: "West Asia")
-                                    .foregroundStyle(.primary)
-                                    .fontDesign(.serif)
-                                    .font(.system(size: 20))
-                                    .padding(.horizontal, 15)
-                            }
-                        }
-                        .background(Color.gray.opacity(0.1))
-                            .frame(width: width * 0.90, height: 250 )
-                            .clipShape(RoundedRectangle(cornerRadius: 10))
-                            .padding(.horizontal)
-                        Spacer()
-                        Button(action: {
-                            
-                        }, label: {
-                            RoundedRectangle(cornerRadius: 12)
-                             
-                            
-                        })
-                        .overlay (Text("Save")
-                            .fontDesign(.serif)
-                            .font(.system(size: 20))
-                            .foregroundStyle(.white))
-                        .frame(width: width * 0.8, height: 40)
-                        .padding(.bottom, 100)
                     }
+                 
+                        Button{
+                            self.area = "Americas"
+                        } label: {
+                            TimeZoneRow(tzIcon: "globe.americas.fill", tzName: "Americas")
+                                .foregroundStyle(.primary)
+                                .fontDesign(.serif)
+                                .font(.system(size: 20))
+                                .padding(.horizontal, 15)
+                        }
+                        Button{
+                            self.area = "Europe"
+                        } label: {
+                            TimeZoneRow(tzIcon: "globe.europe.africa.fill", tzName: "Europe")
+                                .foregroundStyle(.primary)
+                                .fontDesign(.serif)
+                                .font(.system(size: 20))
+                                .padding(.horizontal, 15)
+                        }
+                        
+                        Button{
+                            self.area = "East Asia"
+                        } label: {
+                            TimeZoneRow(tzIcon: "globe.asia.australia.fill", tzName: "East Asia")
+                                .foregroundStyle(.primary)
+                                .fontDesign(.serif)
+                                .font(.system(size: 20))
+                                .padding(.horizontal, 15)
+                        }
+                        
+                        Button{
+                            self.area = "West Asia"
+                        } label: {
+                            TimeZoneRow(tzIcon: "globe.asia.australia.fill", tzName: "West Asia")
+                                .foregroundStyle(.primary)
+                                .fontDesign(.serif)
+                                .font(.system(size: 20))
+                                .padding(.horizontal, 15)
+                        }
+                    }
+                    .background(Color.gray.opacity(0.1))
+                    .clipShape(RoundedRectangle(cornerRadius: 10))
                     .padding(.horizontal)
+                    Spacer()
+                    
+                    
+                    Button(action: {
+                        
+                    }, label: {
+                        RoundedRectangle(cornerRadius: 10)
+                            .fill(appTint)
+                    })
+                    .overlay (Text("Save")
+                        .fontDesign(.serif)
+                        .font(.system(size: 20))
+                        .foregroundStyle(.white))
+                    .frame(width: width * 0.96, height: 40)
+                    .padding(.bottom, 90)
                 }
-                
+                .padding(.horizontal)
+                Spacer()
             }
+            
         }
-        
     }
-}
+    
+
+
        
 #Preview {
     TimeZoneView()

@@ -75,7 +75,7 @@ struct EditTransaction: View {
                         Text("Date")
                             .font(.caption)
                             .fontWeight(.bold)
-                            .foregroundStyle(.colorGrey)
+                            .foregroundStyle(.colorGray)
                             .hSpacing(.leading)
                         DatePicker("", selection: $dateAdded, displayedComponents: addReminder ? [.date, .hourAndMinute] : [.date])
                             .datePickerStyle(.graphical)
@@ -89,7 +89,7 @@ struct EditTransaction: View {
                     Text("Receipt:  ")
                         .font(.body)
                         .fontWeight(.bold)
-                        .foregroundStyle(.colorGrey)
+                        .foregroundStyle(.colorGray)
                         .hSpacing(.leading)
                     PhotosPicker(
                         selection: $selectedReceipt,
@@ -103,7 +103,7 @@ struct EditTransaction: View {
                                         .scaledToFit()
                                         .background{
                                             RoundedRectangle(cornerRadius: 10, style: .continuous)
-                                                .fill(.colorGrey)
+                                                .fill(.colorGray)
                                                 .frame(width: 160, height: 255)
                                         }
                                 } else {
@@ -228,7 +228,7 @@ struct EditTransaction: View {
             Text(title)
                 .font(.caption)
                 .fontWeight(.bold)
-                .foregroundStyle(.colorGrey)
+                .foregroundStyle(.colorGray)
                 .hSpacing(.leading)
             TextField(hint, text: value)
                 .padding(.horizontal, 10)
@@ -258,7 +258,7 @@ struct EditTransaction: View {
                     }
                         .hSpacing(.leading)
                         .contentShape(.rect)
-                        .foregroundStyle(.colorGrey)
+                        .foregroundStyle(.colorGray)
                         .onTapGesture {
                             self.category = category
                     }
